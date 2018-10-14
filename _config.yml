@@ -1,0 +1,49 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing these this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Anima
+email: warfan2007@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  An OS for the modern internet user.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://anima-os.com" # the base hostname & protocol for your site
+logo: "/images/logo.svg"
+exclude: [.travis, vendor]
+social:
+  links:
+    - https://github.com/anima-os
+    - https://plus.google.com/u/0/100355783508323292342
+    - https://plus.google.com/u/0/communities/115722443491803015565
+    - https://www.facebook.com/Liri-935614733238741
+    - https://twitter.com/liridev
+google_site_verification: true
+repository: anima-os/anima-os.com
+github:
+  repo: "https://github.com/anima-os/anima-os.com"
+social_networks:
+  github: anima-os
+  gitter: anima-os/lobby
+  facebook: Anima-1777750955872032
+  youtube: PLtwK8RgezTNqKYny0vEAY0pEOrYU29-GP
+
+# Build settings
+markdown: kramdown
+sass:
+  sass_dir: _sass
+  style: compressed
+gems:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-toc

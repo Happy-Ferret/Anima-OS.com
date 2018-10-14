@@ -1,0 +1,79 @@
+---
+layout: base
+---
+
+<nav role="navigation">
+  <div class="nav-wrapper container">
+    <a id="logo-container" href="{{ site.baseurl }}/" class="brand-logo"><img src="{{ site.logo }}" width="60" height="60" title="Anima OS"/></a>
+
+    <ul class="right hide-on-med-and-down">
+      <!-- <li id="nav-about" class="waves-effect{% if page.navitem == 'nav-about' %} active{% endif %}"><a href="#">About</a></li> -->
+      <li id="nav-blog" class="waves-effect{% if page.navitem == 'nav-blog' %} active{% endif %}"><a href="{{ site.baseurl }}/blog">Blog</a></li>
+      <li id="nav-apps" class="waves-effect{% if page.navitem == 'nav-apps' %} active{% endif %}"><a href="{{ site.baseurl }}/apps">Apps</a></li>
+      <li id="nav-screenshots" class="waves-effect{% if page.navitem == 'nav-screenshots' %} active{% endif %}"><a href="{{ site.baseurl }}/screenshots">Screenshots</a></li>
+      <!-- <li id="nav-develop" class="waves-effect{% if page.navitem == 'nav-develop' %} active{% endif %}"><a href="#">Develop</a></li> -->
+      <li id="nav-get-involved" class="waves-effect{% if page.navitem == 'nav-get-involved' %} active{% endif %}"><a href="{{ site.baseurl }}/get-involved">Get Involved</a></li>
+      <li id="nav-community" class="waves-effect{% if page.navitem == 'nav-community' %} active{% endif %}">
+        <a href=" https://gitter.im/{{ site.social_networks.gitter }}">Community</a>
+      </li> 
+      <li id="nav-download" class="waves-effect{% if page.navitem == 'nav-download' %} active{% endif %}"><a href="{{ site.baseurl }}/download">Download</a></li>
+    </ul>
+
+    <ul id="nav-mobile" class="side-nav">
+      <!-- <li><a class="waves-effect" href="#">About</a></li> -->
+      <li><a class="waves-effect" href="{{ site.baseurl }}/blog">Blog</a></li>
+      <li><a class="waves-effect" href="{{ site.baseurl }}/apps">Apps</a></li>
+      <li><a class="waves-effect" href="{{ site.baseurl }}/screenshots">Screenshots</a></li>
+      <!-- <li><a class="waves-effect" href="#">Develop</a></li> -->
+      <li><a class="waves-effect" href="{{ site.baseurl }}/get-involved">Get Involved</a></li>
+      <!-- <li><a class="waves-effect" href="#">Support</a></li> -->
+      <li><a class="waves-effect" href="{{ site.baseurl }}/download">Download</a></li>
+    </ul>
+    <a href="#" data-activates="nav-mobile" class="button-collapse waves-effect"><i class="material-icons black-text">menu</i></a>
+  </div>
+</nav>
+
+{{ content }}
+
+<footer class="page-footer primary">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Anima</h5>
+        <p class="grey-text text-lighten-4">An OS and apps built with modern design and features.</p>
+
+
+      </div>
+      <div class="col l3 s12">
+        <h5 class="white-text">Information</h5>
+        <ul>
+          <li><a class="white-text" href="{{ site.baseurl }}/team">Team</a></li>
+          <li><a class="white-text" href="{{ site.baseurl }}/community/code-of-conduct">Code of Conduct</a></li>
+        </ul>
+      </div>
+      <div class="col l3 s12">
+        <h5 class="white-text">Social</h5>
+        <ul>
+          {% if site.social_networks.github %}<li><a class="white-text" href="https://github.com/{{ site.social_networks.github }}">GitHub</a></li>{% endif %}
+          {% if site.social_networks.youtube %}<li><a class="white-text" href="https://www.youtube.com/playlist?list={{ site.social_networks.youtube }}">YouTube</a></li>{% endif %}
+          {% if site.social_networks.facebook %}<li><a class="white-text" href="https://www.facebook.com/{{ site.social_networks.facebook }}">Facebook</a></li>{% endif %}
+          {% if site.social_networks.twitter %}<li><a class="white-text" href="https://twitter.com/{{ site.social_networks.twitter }}">Twitter</a></li>{% endif %}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      &copy; 2015 -- {{ site.time | date: '%Y' }} Anima. <span class="hide-on-small-only">All trademarks and registered trademarks are the property of their respective owners.</span>
+    </div>
+  </div>
+</footer>
+
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}/js/materialize/materialize.min.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}/js/init.js"></script>
+
+{% if jekyll.environment == 'production' %}
+  {% include analytics.html %}
+{% endif %}

@@ -1,0 +1,30 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+@import "materialize/components/color";
+
+$primary-color: color("red", "base") !default;
+$secondary-color: color("red", "base") !default;
+
+$primary-text-color: white !default;
+$secondary-text-color: black !default;
+
+.primary-text {
+  color: $primary-text-color !important;
+}
+
+.secondary-text {
+  color: $secondary-text-color !important;
+}
+
+.primary {
+  background-color: $primary-color !important;
+}
+
+.secondary {
+  background-color: $secondary-color !important;
+}
+
+@import "materialize/materialize";
